@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麹姫の味噌づくり教室</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap');
+        body {
+            font-family: 'Shippori Mincho', serif;
+        }
+        .text-shippori {
+            font-family: 'Shippori Mincho', serif;
+        }
+        /* Hide scrollbar for the carousel, but keep scroll functionality */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#" class="text-3xl font-bold text-amber-800">麹姫の味噌づくり教室</a>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 text-lg font-bold">
+                <li><a href="#about" class="hover:text-amber-600 transition duration-300">はじめに</a></li>
+                <li><a href="#class" class="hover:text-amber-600 transition duration-300">レッスン内容</a></li>
+                <li><a href="#teacher" class="hover:text-amber-600 transition duration-300">先生紹介</a></li>
+                <li><a href="#voice" class="hover:text-amber-600 transition duration-300">お客様の声</a></li>
+                <li><a href="#contact-form" class="hover:text-amber-600 transition duration-300">お申し込み</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="flex flex-col items-center py-4 space-y-4 text-lg">
+                <li><a href="#about" class="hover:text-amber-600 transition duration-300">はじめに</a></li>
+                <li><a href="#class" class="hover:text-amber-600 transition duration-300">レッスン内容</a></li>
+                <li><a href="#teacher" class="hover:text-amber-600 transition duration-300">先生紹介</a></li>
+                <li><a href="#voice" class="hover:text-amber-600 transition duration-300">お客様の声</a></li>
+                <li><a href="#contact-form" class="hover:text-amber-600 transition duration-300">お申し込み</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="page-container">
+        <!-- Hero Section -->
+        <section class="relative h-[600px] flex items-center justify-center text-white text-center p-4">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x600/D09F62/fff?text=');"></div>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-shippori">
+                    日本の伝統を、あなたのおうちで。<br>手作り味噌に挑戦しませんか？
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-bold">
+                    丁寧に教えますので、初めての方でも安心です。
+                </p>
+                <a href="#contact-form" class="mt-8 inline-block px-8 py-4 bg-amber-600 text-white text-xl font-bold rounded-full shadow-lg hover:bg-amber-700 transition duration-300">
+                    お申し込みはこちら
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-4 py-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">はじめに</h2>
+            <div class="bg-white rounded-lg shadow-xl p-8 md:p-12">
+                <p class="text-lg md:text-xl leading-relaxed mb-6">
+                    当教室では、日本の食文化に欠かせない「味噌」を、昔ながらの製法で手作りする楽しさをお伝えしています。
+                </p>
+                <p class="text-lg md:text-xl leading-relaxed mb-6">
+                    厳選した国産大豆と麹、そしてミネラル豊富な自然塩を使用し、仕込みのコツを丁寧にお教えします。
+                </p>
+                <p class="text-lg md:text-xl leading-relaxed">
+                    完成した味噌はご自宅で大切に育て、半年から一年後には、世界に一つだけの深い味わいをお楽しみいただけます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Class Section -->
+        <section id="class" class="container mx-auto px-4 py-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 text-center mb-12">レッスン内容</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <a href="class-details-1.html" class="bg-white rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+                    <img src="https://placehold.co/600x400/D09F62/fff?text=" alt="味噌の材料" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-2">材料について</h3>
+                        <p class="text-gray-600">厳選した国産大豆、米麹、自然塩を使います。</p>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="class-details-2.html" class="bg-white rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+                    <img src="https://placehold.co/600x400/D09F62/fff?text=" alt="仕込み風景" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-2">仕込みの工程</h3>
+                        <p class="text-gray-600">大豆を潰す、麹と混ぜるなど、全工程を体験できます。</p>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="class-details-3.html" class="bg-white rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+                    <img src="https://placehold.co/600x400/D09F62/fff?text=" alt="完成した味噌" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-2">お持ち帰り</h3>
+                        <p class="text-gray-600">完成した味噌は容器に入れてお持ち帰りいただけます。</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Teacher Section -->
+        <section id="teacher" class="container mx-auto px-4 py-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">先生紹介</h2>
+            <a href="#teacher-details" class="block bg-white rounded-lg shadow-xl p-8 md:p-12 transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <img src="https://placehold.co/200x200/D09F62/fff?text=写真" alt="先生のプロフィール写真" class="w-48 h-48 rounded-full object-cover mb-6 md:mb-0">
+                    <div class="text-left">
+                        <h3 class="text-3xl font-bold text-amber-800 mb-4">田中 陽子</h3>
+                        <p class="text-lg md:text-xl leading-relaxed">
+                            幼い頃から祖母の家で味噌作りを手伝い、日本の伝統的な食文化に深く触れてきました。
+                            食と健康、そして手作りの温かさを多くの方に伝えたいという思いから、この教室を始めました。
+                            初心者の方でも楽しく、安心して学べるよう、一人ひとりに寄り添った指導を心がけています。
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Voice Section -->
+        <section id="voice" class="container mx-auto px-4 py-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 text-center mb-12">お客様の声</h2>
+            <div class="relative w-full">
+                <div id="voice-container" class="flex overflow-x-scroll snap-x snap-mandatory hide-scrollbar">
+                    <!-- Voice 1 -->
+                    <div class="flex-shrink-0 w-11/12 md:w-1/2 lg:w-1/3 p-4 snap-center">
+                        <div class="bg-white rounded-lg shadow-xl p-6 h-full">
+                            <p class="text-xl md:text-2xl font-bold text-amber-600 mb-4 whitespace-normal">「初めてでも楽しく作れました！」</p>
+                            <p class="text-gray-700 leading-relaxed mb-4 whitespace-normal">
+                                味噌作りは難しそうに思っていましたが、先生が丁寧に教えてくださり、とても楽しく作ることができました。自分の手で作った味噌が完成するのが楽しみです！
+                            </p>
+                            <p class="text-right text-sm text-gray-500">- 30代 女性</p>
+                        </div>
+                    </div>
+                    <!-- Voice 2 -->
+                    <div class="flex-shrink-0 w-11/12 md:w-1/2 lg:w-1/3 p-4 snap-center">
+                        <div class="bg-white rounded-lg shadow-xl p-6 h-full">
+                            <p class="text-xl md:text-2xl font-bold text-amber-600 mb-4 whitespace-normal">「子どもと一緒に良い経験ができました」</p>
+                            <p class="text-gray-700 leading-relaxed mb-4 whitespace-normal">
+                                子どもと一緒に参加しました。泥んこ遊びみたいで、子どもも大喜びでした。食育にもつながり、親子で良い経験ができて本当に良かったです。
+                            </p>
+                            <p class="text-right text-sm text-gray-500">- 40代 男性</p>
+                        </div>
+                    </div>
+                    <!-- Voice 3 -->
+                    <div class="flex-shrink-0 w-11/12 md:w-1/2 lg:w-1/3 p-4 snap-center">
+                        <div class="bg-white rounded-lg shadow-xl p-6 h-full">
+                            <p class="text-xl md:text-2xl font-bold text-amber-600 mb-4 whitespace-normal">「食卓が豊かになりました！」</p>
+                            <p class="text-gray-700 leading-relaxed mb-4 whitespace-normal">
+                                自分で作った味噌は、市販のものと比べて格段に風味が豊かで、毎日の味噌汁が楽しみになりました。家族にも大好評です！
+                            </p>
+                            <p class="text-right text-sm text-gray-500">- 50代 女性</p>
+                        </div>
+                    </div>
+                    <!-- Voice 4 -->
+                    <div class="flex-shrink-0 w-11/12 md:w-1/2 lg:w-1/3 p-4 snap-center">
+                        <div class="bg-white rounded-lg shadow-xl p-6 h-full">
+                            <p class="text-xl md:text-2xl font-bold text-amber-600 mb-4 whitespace-normal">「友人へのプレゼントに最適です」</p>
+                            <p class="text-gray-700 leading-relaxed mb-4 whitespace-normal">
+                                仕込みから熟成まで自分で手掛けた味噌は、特別感があり、友人への贈り物にも喜ばれました。また来年も参加したいです。
+                            </p>
+                            <p class="text-right text-sm text-gray-500">- 20代 男性</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation Arrows -->
+                <button id="prev-voice" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition duration-300">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="next-voice" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition duration-300">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form" class="container mx-auto px-4 py-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">お申し込みフォーム</h2>
+            <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 max-w-2xl mx-auto">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-lg font-bold text-gray-700 mb-2">お名前</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-amber-500 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-lg font-bold text-gray-700 mb-2">メールアドレス</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-amber-500 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-left text-lg font-bold text-gray-700 mb-2">メッセージ</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-amber-500 transition duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-8 py-4 bg-amber-600 text-white text-xl font-bold rounded-full shadow-lg hover:bg-amber-700 transition duration-300">
+                        送信する
+                    </button>
+                </form>
+                <div id="thankYouMessage" class="hidden mt-8 text-center text-lg font-bold text-green-600">
+                    <p>お申し込みありがとうございます。内容を確認後、担当者よりご連絡いたします。</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-white text-center py-8">
+        <p>&copy; 2024 麹姫の味噌づくり教室. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu, Form, and Voice Carousel -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission functionality
+        const contactForm = document.getElementById('contactForm');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // In a real application, you would send this data to a server here
+            console.log('Form submitted!');
+            
+            // Hide the form and show the thank you message
+            contactForm.classList.add('hidden');
+            thankYouMessage.classList.remove('hidden');
+        });
+
+        // Voice carousel functionality
+        const voiceContainer = document.getElementById('voice-container');
+        const prevButton = document.getElementById('prev-voice');
+        const nextButton = document.getElementById('next-voice');
+
+        prevButton.addEventListener('click', () => {
+            voiceContainer.scrollBy({ left: -voiceContainer.offsetWidth, behavior: 'smooth' });
+        });
+
+        nextButton.addEventListener('click', () => {
+            voiceContainer.scrollBy({ left: voiceContainer.offsetWidth, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
