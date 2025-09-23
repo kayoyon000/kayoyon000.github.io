@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>麹姫の味噌づくり教室 | あなただけの特別な時間を</title>
+    <!-- TailwindCSSを読み込み（デザイン用のCSSフレームワーク） -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Google Fonts（フォントの種類を指定） */
         @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Sawarabi+Mincho&family=Kaisei+Decol:wght@400;700&display=swap');
+        
+        /* ページ全体の文字フォント指定 */
         body {
             font-family: 'Shippori Mincho', serif;
         }
@@ -16,39 +20,31 @@
         .font-shippori {
             font-family: 'Shippori Mincho', serif;
         }
-        .bg-custom-beige {
-            background-color: #FFFBF5;
-        }
-        .text-custom-brown {
-            color: #8B5E3C;
-        }
-        .hover-bg-custom-brown:hover {
-            background-color: #7A512C;
-        }
-        .bg-custom-gold {
-            background-color: #C09A6B;
-        }
-        .hover-bg-custom-gold:hover {
-            background-color: #A9875F;
-        }
-        /* Hide scrollbar for the carousel, but keep scroll functionality */
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
+
+        /* オリジナルの背景色・文字色を定義 */
+        .bg-custom-beige { background-color: #FFFBF5; }
+        .text-custom-brown { color: #8B5E3C; }
+        .hover-bg-custom-brown:hover { background-color: #7A512C; }
+        .bg-custom-gold { background-color: #C09A6B; }
+        .hover-bg-custom-gold:hover { background-color: #A9875F; }
+
+        /* スクロールバーを非表示にするためのCSS */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar {
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE, Edge用 */
+            scrollbar-width: none; /* Firefox用 */
         }
     </style>
 </head>
 <body class="bg-custom-beige text-gray-800">
 
-    <!-- Header -->
+    <!-- ヘッダー部分（ナビゲーションバー） -->
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- サイトタイトル -->
             <a href="#" class="text-3xl font-bold text-custom-brown font-decol">麹姫の味噌づくり教室</a>
             
-            <!-- Desktop Menu -->
+            <!-- パソコン用メニュー -->
             <ul class="hidden md:flex space-x-8 text-lg font-bold">
                 <li><a href="#about" class="text-custom-brown hover:text-amber-700 transition duration-300">はじめに</a></li>
                 <li><a href="#class" class="text-custom-brown hover:text-amber-700 transition duration-300">レッスン内容</a></li>
@@ -57,15 +53,17 @@
                 <li><a href="#contact-form" class="text-custom-brown hover:text-amber-700 transition duration-300">お申し込み</a></li>
             </ul>
 
-            <!-- Mobile Menu Button -->
+            <!-- スマホ用メニューの開閉ボタン -->
             <button id="mobile-menu-button" class="md:hidden text-custom-brown focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <!-- ハンバーガーメニューアイコン -->
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
 
-        <!-- Mobile Menu -->
+        <!-- スマホ用メニューの中身 -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <ul class="flex flex-col items-center py-4 space-y-4 text-lg">
                 <li><a href="#about" class="text-custom-brown hover:text-amber-700 transition duration-300">はじめに</a></li>
@@ -78,10 +76,13 @@
     </header>
 
     <main id="page-container">
-        <!-- Hero Section -->
+        <!-- トップの大きな画像とキャッチコピー（ヒーローセクション） -->
         <section class="relative min-h-screen flex items-center justify-center text-white text-center p-4">
+            <!-- 背景画像 -->
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('お膳の写真.png');"></div>
+            <!-- 半透明の黒いフィルター（文字を見やすくするため） -->
             <div class="absolute inset-0 bg-black opacity-50"></div>
+            <!-- キャッチコピー -->
             <div class="relative z-10">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight font-shippori">
                     日本の伝統を、<br>あなたのおうちで。
@@ -89,13 +90,14 @@
                 <p class="mt-4 text-xl md:text-2xl font-bold font-shippori">
                     手作り味噌に挑戦しませんか？
                 </p>
+                <!-- 申し込みボタン -->
                 <a href="#contact-form" class="mt-8 inline-block px-8 py-4 bg-amber-600 text-white text-xl font-bold rounded-full shadow-lg hover:bg-amber-700 transition duration-300">
                     お申し込みはこちら
                 </a>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- はじめにセクション -->
         <section id="about" class="container mx-auto px-4 py-20 text-center">
             <h2 class="text-4xl md:text-5xl font-bold text-custom-brown font-decol mb-12">はじめに</h2>
             <div class="bg-white rounded-xl shadow-2xl p-8 md:p-12">
@@ -111,11 +113,11 @@
             </div>
         </section>
         
-        <!-- Class Section -->
+        <!-- レッスン内容セクション -->
         <section id="class" class="container mx-auto px-4 py-20">
             <h2 class="text-4xl md:text-5xl font-bold text-custom-brown font-decol text-center mb-12">レッスン内容</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
+                <!-- レッスン内容カード1 -->
                 <a href="class-details-2.html" class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                     <img src="光が差し込む中で、大豆や麹が美しく盛られた写真.jpg" alt="味噌の材料" class="w-full h-56 object-cover object-contain">
                     <div class="p-6 text-center">
@@ -123,7 +125,7 @@
                         <p class="text-gray-600">厳選した国産大豆、米麹、自然塩を使います。</p>
                     </div>
                 </a>
-                <!-- Card 2 -->
+                <!-- レッスン内容カード2 -->
                 <a href="class-details-1.html" class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                     <img src="味噌（味噌汁じゃない）.jpg" alt="仕込み風景" class="w-full h-56 object-cover object-contain">
                     <div class="p-6 text-center">
@@ -131,7 +133,7 @@
                         <p class="text-gray-600">大豆を潰す、麹と混ぜるなど、全工程を体験できます。</p>
                     </div>
                 </a>
-                <!-- Card 3 -->
+                <!-- レッスン内容カード3 -->
                 <a href="class-details-3.html" class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer flex flex-col">
                     <img src="和の小包.jpg" alt="完成した味噌" class="w-full h-56 object-cover object-contain">
                     <div class="p-6 text-center">
@@ -142,7 +144,7 @@
             </div>
         </section>
         
-        <!-- Teacher Profile Section -->
+        <!-- 先生紹介セクション -->
         <section id="teacher" class="container mx-auto px-4 py-20 text-center">
             <h2 class="text-4xl md:text-5xl font-bold text-custom-brown font-decol mb-12">講師紹介</h2>
             <a href="teacher-details.html" class="flex flex-col md:flex-row items-center md:space-x-12 bg-white rounded-xl shadow-2xl p-8 md:p-12 transform transition duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
@@ -157,92 +159,78 @@
             </a>
         </section>
 
-        <!-- Voice Section -->
+        <!-- お客様の声セクション（横スクロールで表示） -->
         <section id="voice" class="container mx-auto px-4 py-20">
             <h2 class="text-4xl md:text-5xl font-bold text-custom-brown font-decol text-center mb-12">お客様の声</h2>
             <div class="relative w-full px-4">
+                <!-- 横スクロールの口コミ一覧 -->
                 <div id="voice-container" class="flex overflow-x-scroll snap-x snap-mandatory hide-scrollbar gap-4">
-                    <!-- Voice 1 -->
+                    <!-- お客様の声1 -->
                     <div class="flex-shrink-0 w-[85vw] md:w-1/2 lg:w-1/3 p-4 snap-center">
                         <div class="bg-white rounded-xl shadow-xl p-6 h-full border border-gray-100">
                             <p class="text-xl md:text-2xl font-bold text-custom-brown mb-4 whitespace-normal">「子どもの食育にもなって、本当に嬉しいです！」</p>
                             <p class="text-gray-700 leading-relaxed mb-4 whitespace-normal">
-                                4歳と6歳の子どもと一緒に参加しました。泥んこ遊びみたいで、子どもたちも大喜び！普段はあまり食に興味がない子も、自分で作ったお味噌は「美味しい！」と食べてくれて感動しました。食育にもつながり、親子で良い経験ができて本当に良かったです。
+                                4歳と6歳の子どもと一緒に参加しました。泥んこ遊びみたいで、子どもたちも大喜び！普段はあまり食に興味がない子も、自分で作ったお味噌は「美味しい！」と食べてくれて感動しました。
                             </p>
                             <p class="text-right text-sm text-gray-500">- 40代 女性</p>
                         </div>
                     </div>
-                    <!-- Voice 2 -->
+                    <!-- お客様の声2 -->
                     <div class="flex-shrink-0 w-[85vw] md:w-1/2 lg:w-1/3 p-4 snap-center">
                         <div class="bg-white rounded-xl shadow-xl p-6 h-full border border-gray-100">
                             <p class="text-xl md:text-2xl font-bold text-custom-brown mb-4 whitespace-normal">「初めてでも楽しく作れました！」</p>
                             <p class="text-gray-700 leading-relaxed mb-4 whitespace-normal">
-                                味噌作りは難しそうに思っていましたが、先生が丁寧に教えてくださり、とても楽しく作ることができました。自分の手で作った味噌が完成するのが楽しみです！友人と一緒に参加しましたが、素敵な思い出ができました。
+                                味噌作りは難しそうに思っていましたが、先生が丁寧に教えてくださり、とても楽しく作ることができました。
                             </p>
                             <p class="text-right text-sm text-gray-500">- 30代 女性</p>
                         </div>
                     </div>
-                    <!-- Voice 3 -->
+                    <!-- お客様の声3 -->
                     <div class="flex-shrink-0 w-[85vw] md:w-1/2 lg:w-1/3 p-4 snap-center">
                         <div class="bg-white rounded-xl shadow-xl p-6 h-full border border-gray-100">
                             <p class="text-xl md:text-2xl font-bold text-custom-brown mb-4 whitespace-normal">「市販品との違いに驚きです！」</p>
                             <p class="text-gray-700 leading-relaxed mb-4 whitespace-normal">
-                                自分で作った味噌は、市販のものと比べて格段に風味が豊かで、毎日の味噌汁が楽しみになりました。家族にも「今日の味噌汁、いつもと違うね！」と大好評。食卓が豊かになったことを実感しています。
+                                自分で作った味噌は、市販のものと比べて格段に風味が豊かで、毎日の味噌汁が楽しみになりました。
                             </p>
                             <p class="text-right text-sm text-gray-500">- 50代 女性</p>
                         </div>
                     </div>
                 </div>
-                <!-- Navigation Arrows -->
+                <!-- 左右の矢印ボタン -->
                 <button id="prev-voice" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition duration-300">
-                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
                 <button id="next-voice" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition duration-300">
-                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </button>
             </div>
         </section>
 
-        <!-- Contact Form Section -->
+        <!-- お申し込みフォーム（Googleフォーム埋め込み） -->
         <section id="contact-form" class="container mx-auto px-4 py-20 text-center">
             <h2 class="text-4xl md:text-5xl font-bold text-custom-brown font-decol mb-12">お申し込みフォーム</h2>
             <div class="bg-white rounded-xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMwEyvqfFpNNsdtKZMQsZKDk1jijKpeC66BsjGuH0mrJVPcw/viewform?usp=dialog" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                <!-- Googleフォームをiframeで埋め込み -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMwEyvqfFpNNsdtKZMQsZKDk1jijKpeC66BsjGuH0mrJVPcw/viewform?usp=dialog" 
+                        width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
             </div>
         </section>
         
     </main>
 
-    <!-- Footer -->
+    <!-- フッター -->
     <footer class="bg-custom-brown text-white text-center py-8">
         <p>&copy; 2025 麹姫の味噌づくり教室. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Mobile Menu, Form, and Voice Carousel -->
+    <!-- JavaScript（メニュー開閉・口コミスライド用） -->
     <script>
-        // Mobile menu functionality
+        // スマホ用メニューを開閉する処理
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Voice carousel functionality
-        const voiceContainer = document.getElementById('voice-container');
-        const prevButton = document.getElementById('prev-voice');
-        const nextButton = document.getElementById('next-voice');
-
-        prevButton.addEventListener('click', () => {
-            voiceContainer.scrollBy({ left: -voiceContainer.offsetWidth, behavior: 'smooth' });
-        });
-
-        nextButton.addEventListener('click', () => {
-            voiceContainer.scrollBy({ left: voiceContainer.offsetWidth, behavior: 'smooth' });
-        });
-    </script>
-</body>
-</html>
+            mobile
