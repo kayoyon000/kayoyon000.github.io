@@ -6,46 +6,57 @@
     <title>お持ち帰り</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap');
+        /* Google Fonts（フォントの種類を指定） */
+        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Sawarabi+Mincho&family=Kaisei+Decol:wght@400;700&display=swap');
+        
+        /* ページ全体の文字フォント指定 */
         body {
             font-family: 'Shippori Mincho', serif;
         }
-        .text-shippori {
+        .font-decol {
+            font-family: 'Kaisei Decol', serif;
+        }
+        .font-shippori {
             font-family: 'Shippori Mincho', serif;
         }
+
+        /* オリジナルの背景色・文字色を定義 */
+        .bg-custom-beige { background-color: #FFFBF5; }
+        .text-custom-brown { color: #8B5E3C; }
+        .hover-bg-custom-brown:hover { background-color: #7A512C; }
+        .bg-custom-gold { background-color: #C09A6B; }
+        .hover-bg-custom-gold:hover { background-color: #A9875F; }
     </style>
 </head>
-<body class="bg-amber-50 text-gray-800">
-    <!-- Header -->
+<body class="bg-custom-beige text-gray-800">
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-3xl font-bold text-amber-800">麹姫の味噌づくり教室</a>
+            <a href="index.html" class="text-3xl font-bold text-custom-brown font-decol">麹姫の味噌づくり教室</a>
         </nav>
     </header>
 
     <main class="container mx-auto px-4 py-20">
         <section>
             <div class="bg-white rounded-lg shadow-xl p-8 md:p-12">
-                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8">お持ち帰り</h2>
-                <img src="https://placehold.co/800x600/D09F62/fff?text=完成した味噌の写真" alt="完成した味噌の写真" class="w-full rounded-lg mb-8">
-                <p class="text-lg md:text-xl leading-relaxed mb-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-custom-brown font-decol mb-8">お持ち帰り</h2>
+                <img src="和の小包.jpg" alt="完成した味噌の写真" class="w-full h-auto object-cover rounded-lg mb-8">
+                <p class="text-lg md:text-xl leading-relaxed mb-6 font-shippori">
                     レッスンで仕込んだ味噌は、密閉できる専用の容器に入れて**お持ち帰りいただけます**。
                     ご自宅に持ち帰った後も、安心しておいしい味噌を育てられるように、**詳しい育て方ガイド**をお渡しします。
                 </p>
-                <p class="text-lg md:text-xl leading-relaxed mb-6">
+                <p class="text-lg md:text-xl leading-relaxed mb-6 font-shippori">
                     約半年後には、香り高い若味噌として、そして1年後には深いコクのある熟成味噌としてお楽しみいただけます。
                     ご自宅で育てる楽しさも、このレッスンの醍醐味です。
                 </p>
-                <a href="index.html" class="mt-8 inline-block px-6 py-3 bg-amber-600 text-white font-bold rounded-full hover:bg-amber-700 transition duration-300">
+                <a href="index.html" class="mt-8 inline-block px-6 py-3 bg-custom-gold text-white font-bold rounded-full hover:bg-amber-700 transition duration-300">
                     トップページに戻る
                 </a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-amber-800 text-white text-center py-8 mt-20">
-        <p>&copy; 2025 麹姫の味噌づくり教室. All Rights Reserved.</p>
+    <footer class="bg-custom-brown text-white text-center py-8 mt-20">
+        <p class="font-shippori">&copy; 2025 麹姫の味噌づくり教室. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
